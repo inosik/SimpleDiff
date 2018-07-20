@@ -1,0 +1,9 @@
+type project
+files
+  bin/Release/**/Simplediff.* ==> lib/
+  !**/*.deps.json
+dependencies
+  framework: net45
+    FSharp.Core >= 4
+  framework: netstandard2.0
+    FSharp.Core >= 4.1.17
