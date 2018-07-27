@@ -36,6 +36,20 @@ let tests =
                 |> Expect.equal "Expected a single `Removed` diff" [Removed items]
         ]
 
+        testList "diffing" [
+            testProperty "can rebuild \"after\" list from diffs" <| fun (before : int list) after ->
+                let diffs = List.diff before after
+                let afterFromDiffs =
+                    ([], diffs)
+                    ||> List.fold (fun acc diff ->
+                        match diff with
+                        | Equal xs
+                        | Added xs -> acc @ xs
+                        | Removed _ -> acc)
+
+                Expect.equal "Should be the same as \"after\"" after afterFromDiffs
+        ]
+
         // These are the same tests as in the original implementation
         testList "upstream" [
             testList "insert" [
