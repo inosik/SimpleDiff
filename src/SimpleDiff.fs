@@ -134,7 +134,7 @@ module List =
         diff before after
 
     /// <summary>
-    /// Find the differences between two lists. This is the same as using <c>diffBy</c> with <c> id</c> as the projection function.
+    /// Find the differences between two lists. This is the same as using <c>diffBy</c> with <c>id</c> as the projection function.
     /// </summary>
     /// <param name="before">The old list of values.</param>
     /// <param name="after">The new list of values.</param>
