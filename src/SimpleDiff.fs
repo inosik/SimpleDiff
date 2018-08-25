@@ -55,7 +55,7 @@ module List =
             // `commonLen` is the length that overlaps in both.
             //
             // These track the largest overlapping substring seen so far, so
-            // natrually we start with a 0-length substring.
+            // naturally we start with a 0-length substring.
             let mutable oldPrefixLen = 0
             let mutable newPrefixLen = 0
             let mutable commonLen = 0
