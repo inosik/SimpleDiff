@@ -5,16 +5,16 @@ type Diff<'a> =
     | Added of 'a list
     | Removed of 'a list
 
-type private SubsequenceInfo =
-    { /// Count of items in the old list before the common sequence.
-      OldPrefixLength : int
-      /// Count of items in the new list before the common sequence.
-      NewPrefixLength : int
-      /// The length of the longest common subsequence.
-      CommonSeqLength : int }
-
 module List =
     open System.Collections.Generic
+
+    type private SubsequenceInfo =
+        { /// Count of items in the old list before the common sequence.
+          OldPrefixLength : int
+          /// Count of items in the new list before the common sequence.
+          NewPrefixLength : int
+          /// The length of the longest common subsequence.
+          CommonSeqLength : int }
 
     /// <summary>Find the differences between two lists.</summary>
     /// <param name="projection">A function that returns the value which is used to compare two items.</param>
