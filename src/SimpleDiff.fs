@@ -46,10 +46,10 @@ module List =
         let getLongestSubsequence old nu =
             let oldIndexMap = index old
 
-            // `subStartOld` is the index of the beginning og the largest
+            // `oldPrefixLen` is the index of the beginning og the largest
             // overlapping substring in the old list.
             //
-            // `subStartNew` is the index of the beginning of the same substring
+            // `newPrefixLen` is the index of the beginning of the same substring
             // in the new list.
             //
             // `commonLen` is the length that overlaps in both.
