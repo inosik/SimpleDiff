@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+
+    - name: Set up Paket
+      run: dotnet tool install --tool-path .paket paket
+
+    - name: Restore dependencies
+      run: .paket/paket restore
+
+    - name: Run tests
+      run: dotnet test --verbosity minimal
