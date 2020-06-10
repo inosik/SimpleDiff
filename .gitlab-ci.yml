@@ -2,8 +2,9 @@ stages:
   - test
 
 test:
-  image: dcurylo/fsharp-mono-netcore
+  image: mcr.microsoft.com/dotnet/core/sdk:3.1
   stage: test
   script:
-    - mono .paket/paket.exe restore
+    - dotnet tool install --tool-path .paket paket
+    - .paket/paket restore
     - dotnet test
