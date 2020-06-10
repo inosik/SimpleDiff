@@ -1,11 +1,9 @@
 stages:
-  - build
+  - test
 
-full:
+test:
   image: dcurylo/fsharp-mono-netcore
-  stage: build
+  stage: test
   script:
     - mono .paket/paket.exe restore
-    - dotnet restore
-    - dotnet build
-    - dotnet run --project test/SimpleDiff.Test.fsproj
+    - dotnet test
