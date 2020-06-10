@@ -4,3 +4,5 @@ storage: none
 nuget FSharp.Core >= 4
 nuget Expecto
 nuget Expecto.FsCheck
+nuget Microsoft.NET.Test.Sdk
+nuget YoloDev.Expecto.TestSdk

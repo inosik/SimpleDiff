@@ -14,6 +14,7 @@ let createTestCase before after expected =
 let (|NonEmptyList|) (NonEmptyArray items) =
     List.ofArray items
 
+[<Tests>]
 let tests =
     testList "Tests" [
         testList "no changes" [
