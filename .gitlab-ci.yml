@@ -2,7 +2,7 @@ stages:
   - test
 
 test:
-  image: mcr.microsoft.com/dotnet/sdk:5.0
+  image: mcr.microsoft.com/dotnet/sdk:6.0
   stage: test
   script:
     - dotnet tool install --tool-path .paket paket

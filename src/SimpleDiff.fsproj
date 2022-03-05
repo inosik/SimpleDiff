@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
     <Description>SimpleDiff is an implementation of a diff function.</Description>
     <VersionPrefix>0.1.0</VersionPrefix>
     <Authors>Ilja Nosik</Authors>
